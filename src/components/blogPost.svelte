@@ -25,8 +25,7 @@
       });
 
       if (res.ok) {
-        const { data } = await res.json(); // Destructuring to get the data field
-        console.log(data);
+        const { data } = await res.json();
 
         // Mapping over the array of objects to transform it
         const transformedPosts = data.map((post) => {
