@@ -7,6 +7,15 @@
   let contents = "";
   let date = "";
 
+  function formatDate(date) {
+    const d = new Date(date);
+    const month = String(d.getMonth() + 1).padStart(2, "0"); // Months are 0-based
+    const day = String(d.getDate()).padStart(2, "0");
+    const year = d.getFullYear();
+
+    return `${month}/${day}/${year}`;
+  }
+
   async function fetchData() {
     try {
       const res = await fetch(`http://34.201.108.35:1337/api/blogs`, {
@@ -20,13 +29,22 @@
         console.log(data);
 
         // Mapping over the array of objects to transform it
-        blogPosts = data.map((post) => ({
-          title: post.attributes.Title,
-          content: post.attributes.Content,
-          date: post.attributes.Date,
-          url: post.attributes.url,
-          id: post.id,
-        }));
+        const transformedPosts = data.map((post) => {
+          const isoString = post.attributes.Date; // Assuming ISO string 'YYYY-MM-DDTHH:MM:SS.sssZ'
+          const datePortion = isoString.split("T")[0]; // Extract 'YYYY-MM-DD'
+          const [year, month, day] = datePortion.split("-");
+          return {
+            title: post.attributes.Title,
+            content: post.attributes.Content,
+            date: new Date(isoString), // Storing for sorting later
+            formattedDate: `${month}/${day}/${year}`, // Manual date format
+            url: post.attributes.url,
+            id: post.id,
+          };
+        });
+
+        // Sort posts by date, most recent first
+        blogPosts = transformedPosts.sort((a, b) => b.date - a.date);
       } else {
         console.error(`Failed to fetch data: ${res.status}`);
       }
@@ -43,7 +61,14 @@
 <div class="w-full">
   {#each blogPosts as post}
     <div class="max-w-[1440px]">
-        <Post title={post.title} content={post.content} date={post.date} url={post.url} id={post.id} data={post} />
+      <Post
+        title={post.title}
+        content={post.content}
+        date={post.formattedDate}
+        url={post.url}
+        id={post.id}
+        data={post}
+      />
     </div>
   {/each}
 </div>
