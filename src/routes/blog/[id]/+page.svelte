@@ -1,16 +1,17 @@
 <script>
   import { onMount } from "svelte";
   import { page } from "$app/stores";
+  import Image from "/src/CAI.png";
 
   let blogData = null;
   let formattedDate = "";
   const blogId = $page.params.id;
 
   function formatDate(isoString) {
-  const datePortion = isoString.split("T")[0]; // Extract 'YYYY-MM-DD'
-  const [year, month, day] = datePortion.split("-");
-  return `${month}/${day}/${year}`;
-}
+    const datePortion = isoString.split("T")[0]; // Extract 'YYYY-MM-DD'
+    const [year, month, day] = datePortion.split("-");
+    return `${month}/${day}/${year}`;
+  }
 
   //Fetch individual blog post by ID
   onMount(async () => {
@@ -37,7 +38,8 @@
   });
 </script>
 
-<div class="p-[4vw]">
+<div class="px-[4vw] pb-[4vw] pt-[30px]">
+  <a href="/"><img src={Image} alt="" class="w-[10%] mb-[30px]" /></a>
   {#if blogData}
     <p class="text-sm mb-[30px] text-gray-800">{formattedDate}</p>
     <h1 class="text-5xl font-bold mb-[30px]">{blogData.Title}</h1>

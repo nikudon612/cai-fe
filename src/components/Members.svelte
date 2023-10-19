@@ -27,12 +27,12 @@
   ];
 </script>
 
-<h2 class="text-xl font-bold text-left">Featured Members</h2>
+<!-- <h2 class="text-xl font-bold text-left">Featured Members</h2> -->
 <div class="flex flex-col items-center justify-start min-h-screen w-full py-6 p-[4vw]">
   <div class="w-[80%]">
     <div class="flex flex-nowrap overflow-x-auto">
       {#each members as member}
-        <div class="w-[200px] h-[200px] flex p-4">
+        <div class="w-[200px] h-[200px] flex flex-wrap p-4">
           <img
             src={member.image}
             alt="Member Image"
