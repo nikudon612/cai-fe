@@ -24,7 +24,7 @@
   });
 </script>
 
-<div class="h-[calc(100vh_-_100px)]">
+<div class="h-[calc(100vh_-_100px)] flex">
   <div class="max-w-[1440px] h-full px-[4vw] py-6">
     <div class="flex flex-row">
       <a class="font-bold text-3xl" href="/"
@@ -38,11 +38,11 @@
     </div>
 
     <div
-      class="w-full h-full p-6 flex flex-col items-center justify-center gap-4"
+      class="w-full h-full p-6 flex flex-col items-center justify-center gap-10"
     >
-      <h1 class="text-6xl font-bold text-center">{homeObject.hero_title}</h1>
-      <h2 class="text-2xl text-center">{homeObject.hero_description}</h2>
-      <div class="flex flex-row gap-6">
+      <h1 class="w-[60rem] text-6xl font-bold text-center">{homeObject.hero_title}</h1>
+      <h2 class="w-[60rem] text-2xl text-center">{homeObject.hero_description}</h2>
+      <div class="w-[60rem] flex flex-row items-center justify-center gap-6">
         <button class="rounded-full border-gray-950 border px-4 py-2"
           >{homeObject.button_1}</button
         >
