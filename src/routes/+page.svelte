@@ -24,23 +24,31 @@
   });
 </script>
 
-<div class="max-w-[1440px] h-screen px-[4vw] py-6 ">
-  <div class="flex flex-row">
-    <a class="font-bold text-3xl" href="/"
-      ><img src={Image} alt="" class="w-[15%] mb-[30px]" /></a
-    >
-    <div class="flex flex-row gap-4">
-      <a class="text-2xl" href="/blog"><h2>Blog</h2></a>
-      <a class="text-2xl" href="/members"><h2>Members</h2></a>
+<div class="h-[calc(100vh_-_100px)]">
+  <div class="max-w-[1440px] h-full px-[4vw] py-6">
+    <div class="flex flex-row">
+      <a class="font-bold text-3xl" href="/"
+        ><img src={Image} alt="" class="w-[15%] mb-[30px]" /></a
+      >
+      <div class="flex flex-row gap-6">
+        <a class="text-xl" href="/blog"><h2>Blog</h2></a>
+        <a class="text-xl" href="/members"><h2>Members</h2></a>
+      </div>
     </div>
-  </div>
 
-  <div class="w-full h-full pb-[100px] p-6 flex flex-col items-center justify-center gap-4 ">
-    <h1 class="text-6xl font-bold">{homeObject.hero_title}</h1>
-    <h2 class="text-2xl">{homeObject.hero_description}</h2>
-    <div class="flex flex-row gap-6">
-      <button class="rounded-full border-gray-950 border px-4 py-2">{homeObject.button_1}</button>
-      <button class="rounded-full border-gray-950 border px-4 py-2">{homeObject.button_2}</button>
+    <div
+      class="w-full h-full p-6 flex flex-col items-center justify-center gap-4"
+    >
+      <h1 class="text-6xl font-bold">{homeObject.hero_title}</h1>
+      <h2 class="text-2xl">{homeObject.hero_description}</h2>
+      <div class="flex flex-row gap-6">
+        <button class="rounded-full border-gray-950 border px-4 py-2"
+          >{homeObject.button_1}</button
+        >
+        <button class="rounded-full border-gray-950 border px-4 py-2"
+          >{homeObject.button_2}</button
+        >
+      </div>
     </div>
   </div>
 </div>
