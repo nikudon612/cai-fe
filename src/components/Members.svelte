@@ -37,11 +37,11 @@
   class="flex flex-col items-center justify-start min-h-screen w-full py-6 p-[4vw]"
 >
   <div class="w-full">
-    <div class="flex flex-nowrap gap-4">
+    <div class="flex flex-row gap-4 items-center justify-center">
       {#each membersData as member}
         <div class="flex flex-col">
-          <div>{member.name}</div>
-          <img src={member.image} alt="" class="w-[200px]" />
+          <div class="font-bold">{member.name}</div>
+          <img src={member.image} alt="" class="w-[100px]" />
         </div>
       {/each}
     </div>
