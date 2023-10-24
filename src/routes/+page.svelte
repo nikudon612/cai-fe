@@ -13,7 +13,7 @@
       });
       if (res.ok) {
         const home = await res.json();
-        console.log(home);
+        // console.log(home);
         homeObject = home.data.attributes;
       } else {
         console.error("Failed to fetch blog data");
@@ -32,6 +32,7 @@
       >
       <div class="flex flex-row gap-6">
         <a class="text-xl" href="/blog"><h2>Blog</h2></a>
+        <a class="text-xl" href="/test"><h2>Test</h2></a>
         <a class="text-xl" href="/members"><h2>Members</h2></a>
       </div>
     </div>

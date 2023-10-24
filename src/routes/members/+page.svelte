@@ -3,11 +3,17 @@
   import Image from "/src/CAI.png";
 </script>
 
-<div class="w-full h-screen py-6 flex flex-col p-[4vw]">
-    <div class="flex flex-row items-center justify-between w-full">
-        <a class="font-bold text-3xl" href="/"
-        ><img src={Image} alt="" class="w-[16%] mb-[30px]" /></a
-      >    </div>
-    <h1 class="mb-[30px] text-2xl font-bold">Featured Members</h1>
+<div class="w-full py-6 flex flex-col p-[4vw]">
+  <div class="flex flex-row">
+      <a class="font-bold text-3xl" href="/"
+        ><img src={Image} alt="" class="w-[15%] mb-[30px]" /></a
+      >
+      <div class="flex flex-row gap-6">
+        <a class="text-xl" href="/blog"><h2>Blog</h2></a>
+        <a class="text-xl" href="/test"><h2>Test</h2></a>
+        <a class="text-xl" href="/members"><h2>Members</h2></a>
+      </div>
+    </div>
+    <h1 class="mb-[60px] text-4xl font-bold">Featured Members</h1>
     <Members />
 </div>

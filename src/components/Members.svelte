@@ -15,7 +15,7 @@
 
       if (res.ok) {
         const allMembers = await res.json();
-        console.log(allMembers);
+        // console.log(allMembers);
         const membersMap = allMembers.data.map((member) => {
           return {
             name: member.attributes.Name,
@@ -40,7 +40,6 @@
     <div class="flex flex-row gap-4 items-center justify-center">
       {#each membersData as member}
         <div class="flex flex-col">
-          <div class="font-bold">{member.name}</div>
           <img src={member.image} alt="" class="w-[100px]" />
         </div>
       {/each}
