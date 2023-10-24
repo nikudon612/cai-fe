@@ -43,10 +43,10 @@
       <h1 class="w-[60rem] text-6xl font-bold text-center">{homeObject.hero_title}</h1>
       <h2 class="w-[60rem] text-2xl text-center">{homeObject.hero_description}</h2>
       <div class="w-[60rem] flex flex-row items-center justify-center gap-6">
-        <button class="rounded-full border-gray-950 border px-4 py-2"
+        <button class="rounded-lg border-white border px-4 py-2"
           >{homeObject.button_1}</button
         >
-        <button class="rounded-full border-gray-950 border px-4 py-2"
+        <button class="rounded-lg border-[#6856F3] border px-4 py-2"
           >{homeObject.button_2}</button
         >
       </div>
