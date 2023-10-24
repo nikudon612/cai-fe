@@ -61,7 +61,7 @@
         <RenderComponent
           {component}
           extraData={{
-            imageUrl: post.attributes.Thumbnail.data[0].attributes.url,
+            // imageUrl: post.attributes.Thumbnail.data[0].attributes.url,
           }}
         />
       {/each}
