@@ -21,6 +21,7 @@
         testData = data;
         console.log(testData);
         console.log(testData[0].attributes.Body[0].body);
+        console.log(testData[0].attributes.Body[2].image.data.attributes.url)
       } else {
         console.error(`Failed to fetch data: ${res.status}`);
       }
@@ -32,7 +33,6 @@
   onMount(() => {
     fetchData();
   });
-
 </script>
 
 <div class="w-full py-6 flex flex-col p-[4vw]">
@@ -53,18 +53,22 @@
 {#if testData.length > 0}
   <div />
   {#each testData as post}
-    <div>
-      <h1>{post.attributes.Title}</h1>
-      <p>{post.attributes.Summary}</p>
-
-      {#each post.attributes.Body as component}
-        <RenderComponent
-          {component}
-          extraData={{
-            // imageUrl: post.attributes.Thumbnail.data[0].attributes.url,
-          }}
-        />
-      {/each}
+    <div class="px-6">
+      <div class="pb-[30px]">
+        <h1 class="text-3xl font-bold">{post.attributes.Title}</h1>
+        <p class="text-sm">{post.attributes.Summary}</p>
+      </div>
+      <div class="">
+        {#each post.attributes.Body as component}
+          <RenderComponent
+            {component}
+            extraData={{
+            //   imageUrl: post.attributes.Thumbnail.data[0].attributes.url,
+              compImage: post.attributes.Body[2]?.image?.data?.attributes.url,
+            }}
+          />
+        {/each}
+      </div>
     </div>
   {/each}
 {:else}

@@ -16,7 +16,8 @@
 
   if (component.__component === "image-with-text.section-with-image") {
     extraProps.imageUrl = extraData.imageUrl; // Using extraData
-    extraProps.body = component.yourBodyField; // Replace this with the actual field
+    extraProps.compImage = extraData.compImage; // Add this line to include compImage
+    extraProps.body = component.Body; // Replace this with the actual field
   }
 </script>
 

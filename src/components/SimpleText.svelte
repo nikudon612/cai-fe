@@ -3,7 +3,7 @@
     export let body;
   </script>
   
-  <div>
+  <div class="pb-[30px]">
     <p>{body}</p>
   </div>
   
