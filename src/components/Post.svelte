@@ -18,7 +18,7 @@
     ><h1 class="text-3xl font-bold mb-[30px]">{title}</h1></a
   >
   <!-- Remove full markdown and show preview text -->
-  <article class="w-full prose prose-lg mb-[30px]">
+  <article class="w-full prose prose-lg mb-[30px] text-gray-400">
     <SvelteMarkdown {source} />
   </article>
   <a href={`/blog/${id}`} data={data}><p class="text-xl underline">Read More</p></a>

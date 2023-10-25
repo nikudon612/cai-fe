@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import Image from "/src/CAI.png";
   import RenderComponent from "../../components/RenderComponent.svelte";
+  import Navigation from "../../components/Navigation.svelte";
 
   let testData = [];
 
@@ -21,7 +22,7 @@
         testData = data;
         console.log(testData);
         console.log(testData[0].attributes.Body[0].body);
-        console.log(testData[0].attributes.Body[2].image.data.attributes.url)
+        console.log(testData[0].attributes.Body[2].image.data.attributes.url);
       } else {
         console.error(`Failed to fetch data: ${res.status}`);
       }
@@ -35,36 +36,32 @@
   });
 </script>
 
-<div class="w-full py-6 flex flex-col p-[4vw]">
-  <div class="flex flex-row">
-    <a class="font-bold text-3xl" href="/"
-      ><img src={Image} alt="" class="w-[15%] mb-[30px]" /></a
-    >
-    <div class="flex flex-row gap-6">
-      <a class="text-xl" href="/blog"><h2>Blog</h2></a>
-      <a class="text-xl" href="/test"><h2>Test</h2></a>
-      <a class="text-xl" href="/members"><h2>Members</h2></a>
-    </div>
-  </div>
-  <h1 class="mb-[60px] text-4xl font-bold">Test</h1>
-</div>
-
-<!-- Rendering dynamic components -->
-{#if testData.length > 0}
-  <div />
-  {#each testData as post}
-    <div class="px-6">
-      <div class="pb-[30px]">
-        <h1 class="text-3xl font-bold">{post.attributes.Title}</h1>
-        <p class="text-sm">{post.attributes.Summary}</p>
-      </div>
-      <div class="">
-        {#each post.attributes.Body as bodyItem, index}
-        <RenderComponent {bodyItem} compImage={bodyItem?.image?.data?.attributes?.url} />
+<div
+  class="h-screen w-screen flex flex-col items-center justify-start bg-black text-white overflow-x-hidden"
+>
+  <div class="max-w-[1440px] py-6">
+    <Navigation />
+    <!-- Rendering dynamic components -->
+    {#if testData.length > 0}
+      <div />
+      {#each testData as post}
+        <div class="px-6">
+          <div class="pb-[30px]">
+            <h1 class="text-3xl font-bold">{post.attributes.Title}</h1>
+            <p class="text-sm">{post.attributes.Summary}</p>
+          </div>
+          <div class="">
+            {#each post.attributes.Body as bodyItem, index}
+              <RenderComponent
+                {bodyItem}
+                compImage={bodyItem?.image?.data?.attributes?.url}
+              />
+            {/each}
+          </div>
+        </div>
       {/each}
-      </div>
-    </div>
-  {/each}
-{:else}
-  <p>Loading...</p>
-{/if}
+    {:else}
+      <p>Loading...</p>
+    {/if}
+  </div>
+</div>

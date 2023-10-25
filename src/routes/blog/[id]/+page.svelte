@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import { page } from "$app/stores";
   import Image from "/src/CAI.png";
+  import Navigation from "../../../components/Navigation.svelte";
 
   let blogData = null;
   let formattedDate = "";
@@ -38,15 +39,21 @@
   });
 </script>
 
-<div class="px-[4vw] pb-[4vw] pt-[30px]">
-  <a href="/"><img src={Image} alt="" class="w-[10%] mb-[30px]" /></a>
-  {#if blogData}
-    <p class="text-sm mb-[30px] text-gray-800">{formattedDate}</p>
-    <h1 class="text-5xl font-bold mb-[30px]">{blogData.Title}</h1>
-    <!-- Note that keys are case-sensitive -->
-    <p class="leading-6">{blogData.Content}</p>
-    <!-- render other attributes here -->
-  {:else}
-    <p>Loading...</p>
-  {/if}
+<div
+  class="h-screen w-screen flex flex-col items-center justify-start bg-black text-white overflow-x-hidden"
+>
+  <div class="max-w-[1440px] py-6 px-[4vw]">
+    <Navigation />
+    <div class=" pb-[4vw] pt-[30px]">
+      {#if blogData}
+        <p class="text-sm mb-[30px] text-gray-800">{formattedDate}</p>
+        <h1 class="text-5xl font-bold mb-[30px]">{blogData.Title}</h1>
+        <!-- Note that keys are case-sensitive -->
+        <p class="leading-6">{blogData.Content}</p>
+        <!-- render other attributes here -->
+      {:else}
+        <p>Loading...</p>
+      {/if}
+    </div>
+  </div>
 </div>
