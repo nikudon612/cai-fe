@@ -6,8 +6,8 @@
     // Add more props for the image later, if needed
   </script>
   
-  <div class="w-full items-center justify-center pb-[30px]" style="display: flex; justify-content: space-between;">
+  <div class="w-full items-center justify-center flex flex-row pb-[30px]">
+    <img class="m-w-1/2" src={compImage} alt="Description" />
     <p class="w-1/2 text-center">{body}</p>
-    <img class="w-1/2" src={compImage} alt="Description" />
   </div>
   
