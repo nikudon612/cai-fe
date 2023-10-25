@@ -9,7 +9,7 @@ import BlogPost from "../../components/blogPost.svelte";
 >
   <div class="max-w-[1440px] py-6">
     <Navigation />
-    <h1 class="mb-[60px] text-4xl font-bold">Blog</h1>
+    <h1 class="mb-[60px] text-4xl font-bold text-center">Blog</h1>
     <BlogPost />
   </div>
 </div>

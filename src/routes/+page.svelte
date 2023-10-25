@@ -26,7 +26,7 @@ import Image from "/src/CAI.png";
 </script>
 
 <div class="h-screen w-screen flex flex-col items-center justify-start bg-black text-white">
-  <div class="max-w-[1440px] px-[4vw] py-6">
+  <div class="max-w-[1440px] py-6">
     <Navigation />
     <div
       class="w-full h-[720px] p-6 flex flex-col items-center justify-center gap-10"
