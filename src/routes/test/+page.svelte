@@ -59,15 +59,9 @@
         <p class="text-sm">{post.attributes.Summary}</p>
       </div>
       <div class="">
-        {#each post.attributes.Body as component}
-          <RenderComponent
-            {component}
-            extraData={{
-            //   imageUrl: post.attributes.Thumbnail.data[0].attributes.url,
-              compImage: post.attributes.Body[2]?.image?.data?.attributes.url,
-            }}
-          />
-        {/each}
+        {#each post.attributes.Body as bodyItem, index}
+        <RenderComponent {bodyItem} compImage={bodyItem?.image?.data?.attributes?.url} />
+      {/each}
       </div>
     </div>
   {/each}

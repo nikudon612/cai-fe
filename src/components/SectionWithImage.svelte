@@ -1,12 +1,11 @@
-<!-- SectionWithImage.svelte -->
+<!-- Example: SectionWithImage.svelte -->
 <script>
     export let body;
-    export let imageUrl;
     export let compImage;
   </script>
   
   <div class="pb-[30px]">
-    <img src={compImage} alt="Secttion with image Description" />
+    <img src={compImage} alt="Section with image Description" />
     <p>{body}</p>
   </div>
   
