@@ -1,7 +1,6 @@
 <!-- ImageRightTextLeft.svelte -->
 <script>
     export let body;
-    export let imageUrl;
     export let compImage;
     // Add more props for the image later, if needed
   </script>
