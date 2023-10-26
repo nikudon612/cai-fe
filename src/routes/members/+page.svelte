@@ -4,6 +4,11 @@
   import Image from "/src/CAI.png";
 </script>
 
+<svelte:head>
+  <title>CAI | Members</title>
+  <meta name="description" content="CAI Members" />
+</svelte:head>
+
 <div
   class="h-screen w-screen flex flex-col items-center justify-start bg-black text-white overflow-x-hidden"
 >

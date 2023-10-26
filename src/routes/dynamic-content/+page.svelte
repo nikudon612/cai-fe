@@ -38,6 +38,11 @@
   });
 </script>
 
+<svelte:head>
+  <title>CAI | Dynamic Content</title>
+  <meta name="description" content="CAI Dynamic Content" />
+</svelte:head>
+
 <div
   class="h-screen w-screen flex flex-col items-center justify-start bg-black text-white overflow-x-hidden"
 >

@@ -25,6 +25,11 @@ import Image from "/src/CAI.png";
   });
 </script>
 
+<svelte:head>
+  <title>CAI</title>
+  <meta name="description" content="CAI" />
+</svelte:head>
+
 <div class="h-screen w-screen flex flex-col items-center justify-start bg-black text-white">
   <div class="max-w-[1440px] py-6">
     <Navigation />

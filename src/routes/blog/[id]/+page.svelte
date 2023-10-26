@@ -42,6 +42,11 @@
   });
 </script>
 
+<svelte:head>
+  <title>{blogData?.Title}</title>
+  <meta name="description" content={blogData?.Content} />
+</svelte:head>
+
 <div
   class="h-screen w-screen flex flex-col items-center justify-start bg-black text-white overflow-x-hidden"
 >
