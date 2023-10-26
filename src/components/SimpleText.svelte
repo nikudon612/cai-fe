@@ -4,6 +4,6 @@
   </script>
   
   <div class="pb-[30px]">
-    <p>{body}</p>
+    <p class="mb-[30px] text-white opacity-60">{body}</p>
   </div>
   

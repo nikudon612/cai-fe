@@ -9,6 +9,6 @@
   <div class="flex flex-row items-center gap-6">
     <a class="text-lg" href="/blog"><h2>Blog</h2></a>
     <a class="text-lg" href="/members"><h2>Members</h2></a>
-    <a class="text-lg" href="/test"><h2>Test</h2></a>
+    <a class="text-lg" href="/dynamic-content"><h2>Dynamic Content</h2></a>
   </div>
 </div>

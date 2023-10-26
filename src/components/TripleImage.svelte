@@ -20,9 +20,9 @@
   <article class="w-auto prose prose-lg mb-[100px] text-white opacity-60">
     <SvelteMarkdown {source} />
   </article>
-  <div class="flex flex-row items-center justify-between gap-20">
-    <img class="w-1/3" src={compImage} alt="Description" />
-    <img class="w-1/3" src={Image2} alt="Description" />
-    <img class="w-1/3" src={Image3} alt="Description" />
+  <div class="flex flex-row items-center justify-between gap-6">
+    <img class="w-1/4" src={compImage} alt="Description" />
+    <img class="w-1/4" src={Image2} alt="Description" />
+    <img class="w-1/4" src={Image3} alt="Description" />
   </div>
 </div>

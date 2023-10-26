@@ -22,5 +22,4 @@
     <SvelteMarkdown {source} />
   </article>
   <a href={`/blog/${id}`} data={data}><p class="rounded-lg border-white border px-4 py-2 w-[135px] text-center">Read More</p></a>
-  <!-- Insert Preview Image -->
 </div>

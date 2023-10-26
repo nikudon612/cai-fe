@@ -19,6 +19,7 @@
 >
   <article class="w-auto prose prose-lg mb-[30px] text-white opacity-60">
     <SvelteMarkdown {source} />
+
   </article>
   <img class="w-1/3" src={compImage} alt="Description" />
 </div>
