@@ -46,7 +46,7 @@ import Image from "/src/CAI.png";
         {homeObject.hero_description}
       </h2>
       <div class="w-[60rem] flex flex-row items-center justify-center gap-6">
-        <button class="rounded-lg border-white border px-4 py-2"
+        <button class="rounded-lg border-white bg-white text-black border px-4 py-2"
           >{homeObject.button_1}</button
         >
         <button class="rounded-lg border-[#6856F3] border px-4 py-2"
