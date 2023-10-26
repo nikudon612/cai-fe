@@ -47,7 +47,7 @@
     {#if testData.length > 0}
       <div />
       {#each testData as post}
-        <div class="px-6">
+        <div class="px-6 mt-20">
           <div class="pb-[30px]">
             <h1 class="text-3xl font-bold">{post.attributes.Title}</h1>
             <p class="text-sm">{post.attributes.Summary}</p>

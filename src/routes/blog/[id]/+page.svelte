@@ -47,7 +47,7 @@
 >
   <div class="max-w-[1440px] py-6 px-[4vw]">
     <Navigation />
-    <div class=" pb-[4vw] pt-[30px]">
+    <div class=" pb-[4vw] pt-[100px]">
       {#if blogData}
         <p class="text-sm mb-[30px] text-white">{formattedDate}</p>
         <h1 class="text-6xl font-bold mb-[30px]">{blogData.Title}</h1>
