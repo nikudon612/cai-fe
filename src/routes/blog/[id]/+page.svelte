@@ -28,7 +28,6 @@
         const allBlogs = await res.json();
         blogData = allBlogs.data.find((blog) => blog.id === parseInt(blogId));
         console.log(blogData);
-        console.log(blogData.attributes.RichText)
         if (blogData) {
           blogData = blogData.attributes; // Access the 'attributes' object
           formattedDate = formatDate(blogData.Date); // Call the formatDate function
@@ -59,7 +58,7 @@
         <!-- <RenderComponent /> -->
         <img class="w-full mb-[60px]" src={blogData.Preview.data.attributes.url} alt="Preview" />
         <article class="w-screen mx-0 prose prose-lg  mb-[30px] text-white opacity-60">
-          <MarkdownWrapper source={blogData.RichText} />
+          <MarkdownWrapper source={blogData.Content} />
         </article>
       {:else}
         <p>Loading...</p>
