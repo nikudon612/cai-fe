@@ -51,13 +51,24 @@
 >
   <div class="max-w-[1440px] py-6 px-[4vw]">
     <Navigation />
-    <div class=" pb-[4vw] pt-[100px]">
+    <div class="pb-[4vw] pt-[100px]">
       {#if blogData}
         <p class="text-sm mb-[30px] text-white">{formattedDate}</p>
         <h1 class="text-6xl font-bold mb-[30px]">{blogData.Title}</h1>
-        <!-- <RenderComponent /> -->
-        <img class="w-full mb-[60px]" src={blogData.Preview.data.attributes.url} alt="Preview" />
-        <article class="w-screen mx-0 prose prose-lg  mb-[30px] text-white opacity-60">
+        
+        {#if blogData && blogData.Preview && blogData.Preview.data && blogData.Preview.data.attributes && blogData.Preview.data.attributes.url}
+          <img
+            class="w-full mb-[60px]"
+            src={blogData.Preview.data.attributes.url}
+            alt="Preview"
+          />
+        {:else}
+          <!-- <div>No image available</div> -->
+        {/if}
+
+        <article
+          class="w-screen mx-0 prose prose-lg mb-[30px] text-white opacity-60"
+        >
           <MarkdownWrapper source={blogData.Content} />
         </article>
       {:else}
